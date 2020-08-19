@@ -13,10 +13,10 @@ functions:
       - http: ANY /
       - http: 'ANY {proxy+}'
     environment: # Function level environment variables
-      DB_URL: '111'
-      DB_USERNAME: '222'
-      DB_PASSWORD: '333'
-      DB_NAME: '444'
+      DB_URL: ${env:DB_URL}
+      DB_USERNAME: ${env:DB_USERNAME}
+      DB_PASSWORD: ${env:DB_PASSWORD}
+      DB_NAME: ${env:DB_NAME}
 
 custom:
   wsgi:
@@ -29,6 +29,7 @@ custom:
 plugins:
   - serverless-wsgi
   - serverless-python-requirements
+  - serverless-dotenv-plugin
 
 package:
   exclude:

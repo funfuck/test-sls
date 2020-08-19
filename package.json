@@ -8,7 +8,9 @@
     "serverless-wsgi": "^1.7.5",
     "serverless-python-requirements": "^5.1.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "serverless-dotenv-plugin": "^3.0.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
