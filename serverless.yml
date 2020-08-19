@@ -3,6 +3,7 @@ service: flask-api
 provider:
   name: aws
   runtime: python3.8
+  # stage: dev
   # region: 'ap-southeast-1'
 
 functions:
@@ -11,6 +12,11 @@ functions:
     events:
       - http: ANY /
       - http: 'ANY {proxy+}'
+    environment: # Function level environment variables
+      DB_URL: '111'
+      DB_USERNAME: '222'
+      DB_PASSWORD: '333'
+      DB_NAME: '444'
 
 custom:
   wsgi:
