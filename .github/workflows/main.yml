@@ -16,7 +16,7 @@ jobs:
       # uses: serverless/github-action@master
       uses: jackdcasey/github-action@python3.8-nodejs13
       with:
-        args: deploy
+        args: deploy --stage dev
       env:
         # SERVERLESS_ACCESS_KEY: ${{ secrets.SERVERLESS_ACCESS_KEY }}
         # or if using AWS creds directly
